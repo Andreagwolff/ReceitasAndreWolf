@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/ingrediente_item_editNome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="Nome"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        android:layout_weight="7"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/ingrediente_item_editUnidade"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="Un"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:inputType="text"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        android:layout_weight="1"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/ingrediente_item_editQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="Qt"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/ingrediente_item_btnRemover"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:tint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_delete_green_24dp" />
+
+</LinearLayout>

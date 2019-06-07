@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddEditReceitaActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/activity_add_edit_receita_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_add_edit_receita_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="6dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="8dp"
+                        android:textSize="22sp"
+                        android:layout_weight="1"
+                        android:text="Favorito?"/>
+
+                    <com.github.angads25.toggle.LabeledSwitch
+                        android:id="@+id/activity_add_edit_receita_switchFavorito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_gravity="center_vertical|end"
+                        app:textOn="Sim"
+                        app:textOff="Não"
+                        app:on="false"
+                        app:colorOn="@color/colorPrimary"
+                        app:colorBorder="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_add_edit_receita_imgReceita"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/blank"/>
+
+                <Button
+                    android:id="@+id/activity_add_edit_receita_btnSelecionarImagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"
+                    android:shadowColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:text="Selecionar Imagem"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/activity_add_edit_receita_editNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="Nome"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp"
+                    android:inputType="text"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_singleLineEllipsis="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/activity_add_edit_receita_editModoPreparo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="Modo de Preparo"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_singleLineEllipsis="false"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/activity_add_edit_receita_editTempoPreparo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:hint="Tempo"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:inputType="textMultiLine"
+                        app:met_baseColor="@color/colorPrimary"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="false"/>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/activity_add_edit_receita_editRendimento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:hint="Rendimento"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:inputType="textMultiLine"
+                        app:met_baseColor="@color/colorPrimary"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textSize="22sp"
+                        android:text="Ingredientes"/>
+
+                    <Button
+                        android:id="@+id/activity_add_edit_receita_btnAdicionarIngrediente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@color/colorPrimary"
+                        android:shadowColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:text="Adicionar"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_add_white_24dp"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_add_edit_receita_recyclerViewIngredientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:scrollbars="vertical"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/activity_add_edit_receita_btnConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"
+                    android:shadowColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:text="Confirmar"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>
